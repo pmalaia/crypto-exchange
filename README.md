@@ -1,39 +1,43 @@
-# crypto-exchange
+# Crypto Exchange
 
-This template should help get you started developing with Vue 3 in Vite.
+Test project: a simple SPA built with Vue 3 to display cryptocurrency rates and perform exchanges.  
+Supported currencies: **Bitcoin (BTC), Ethereum (ETH), Tether (USDT), Solana (SOL)**.
 
-## Recommended IDE Setup
+---
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 🚀 Features
 
-## Type Support for `.vue` Imports in TS
+- Fetching live crypto-to-USD rates (via [CoinGecko API](https://www.coingecko.com/en/api)).
+- Auto-refresh every 30 seconds (only when the tab is active).
+- Exchange form: select From/To currency, input amount, and see converted result instantly.
+- Exchange history logging (amount, result, date).
+- Minimal responsive UI.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+---
 
-## Customize configuration
+## 🛠️ Tech Stack
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- [Vue 3](https://vuejs.org/) + Composition API
+- TypeScript
+- Fetch API
+- Pinia
+- TailwindCSS
 
-## Project Setup
+---
 
-```sh
+## 📦 Installation & Run
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/pmalaia/crypto-exchange.git
+cd crypto-exchange
+
+# 2. Install dependencies
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# 3. Run the project
 npm run dev
-```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+# 4. Open in browser
+http://localhost:5173/
 ```
