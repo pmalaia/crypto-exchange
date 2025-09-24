@@ -2,11 +2,7 @@ export type CryptoId = 'bitcoin' | 'ethereum' | 'tether' | 'solana'
 
 export type CryptoSymbol = 'BTC' | 'ETH' | 'USDT' | 'SOL'
 
-export type CryptoRates = {
-  [key in CryptoId]?: {
-    usd: number
-  }
-}
+export type CryptoRates = Record<CryptoId, { usd: number }>
 
 export type ExchangeRecord = {
   from: CryptoId
@@ -16,7 +12,4 @@ export type ExchangeRecord = {
   date: string
 }
 
-export type RateItem = {
-  id: CryptoId
-  usd: number
-}
+export type RateItem = { id: CryptoId } & CryptoRates[CryptoId]
